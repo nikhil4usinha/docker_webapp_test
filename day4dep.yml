@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nikhildp1
+  name: nikhildp1
+  namespace: nikhilns
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nikhildp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nikhildp1
+    spec:
+      containers:
+      - image: nikhil4usinha/nikhileyweb:v1
+        name: nikhileyweb
+        imagePullPolicy: Always
+        resources: {}
+status: {}
